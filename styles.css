@@ -1,0 +1,296 @@
+/* =======================================================
+   ESTILOS GENERALES - CRUCES Y TIERRA (CLAROS Y SUAVES)
+   ======================================================= */
+   * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f0fdf4; /* Verde menta muy claro */
+    color: #1e293b;
+    min-height: 100vh;
+}
+
+/* Pantalla de Autenticación / Registro */
+.registro-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.registro-container {
+    background: #ffffff;
+    border: 1px solid #bbf7d0;
+    padding: 40px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 10px 25px rgba(22, 101, 52, 0.08);
+}
+
+.logo-grande {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #15803d;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.registro-container h1 {
+    font-size: 1.5rem;
+    color: #0f172a;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.registro-container p {
+    color: #475569;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Pestañas de Auth */
+.auth-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.auth-tab {
+    flex: 1;
+    padding: 10px;
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    color: #64748b;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.auth-tab.active {
+    background: #15803d;
+    color: #ffffff;
+    border-color: #15803d;
+}
+
+/* Formularios */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 6px;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    color: #0f172a;
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #15803d;
+    background: #ffffff;
+}
+
+/* Selector de Emojis */
+.selector-emojis {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.emoji-opt {
+    font-size: 1.8rem;
+    padding: 8px;
+    background: #f8fafc;
+    border: 2px solid #cbd5e1;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.emoji-opt.selected {
+    border-color: #15803d;
+    transform: scale(1.1);
+    background: #dcfce7;
+}
+
+/* Botón Principal */
+.btn-primary-large {
+    width: 100%;
+    padding: 14px;
+    background: #15803d;
+    color: #ffffff;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+.btn-primary-large:hover {
+    background: #166534;
+}
+
+/* Barra de Navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #15803d;
+}
+
+.user-stats {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f8fafc;
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid #e2e8f0;
+}
+
+.racha-badge, .puntos-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.btn-logout {
+    padding: 6px 12px;
+    background: #fee2e2;
+    color: #991b1b;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Contenedor y Tarjetas de Módulos */
+.container {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.levels-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px rgba(21, 128, 61, 0.1);
+    border-color: #86efac;
+}
+
+.card.locked {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.card-icon {
+    font-size: 2.5rem;
+}
+
+.card-content h3 {
+    font-size: 1.1rem;
+    color: #0f172a;
+    margin-bottom: 6px;
+}
+
+.card-content p {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.level-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #15803d;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.status {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #16a34a;
+}
+
+/* Tarjetas de Lección / Actividad */
+.lesson-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.lesson-card h2 {
+    color: #15803d;
+    margin-bottom: 15px;
+}
+
+.lesson-body {
+    color: #334155;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.lesson-body b {
+    color: #15803d;
+}
